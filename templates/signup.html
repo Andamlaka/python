@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>signup</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'">
+       <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap">
+        <script src="https://kit.fontawesome.com/cb792c0050.js" crossorigin="anonymous" ></script>
+    </head>
+    <body>
+        <div class="signup-login">
+            <div class="signup-box">
+              <form method="post">
+                {% csrf_token %}
+                <div class="heading">
+                Signup
+                </div>
+                <div class="line"></div>
+                <div class="field">
+                    <b>Username</b>
+                    <input type="text" name="frm" placeholder="Enter your username" required>
+                </div>
+                <div class="field">
+                    <b>Email</b>
+                    <input type="email" class="inp" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="field">
+                        <b>password</b>
+                        <input type="password" class="inp" placeholder="Enter your password" name="pwd" required>
+                    </div>
+                    <div class="field">
+                        <input type="submit" class="submit-button" value="Signup">
+                    </div>
+              </form>
+              <div class="field">
+                <b>Already have an account?</b>
+                <br>
+                <a href="/loginn" class="anc"></a>
+              </div>
+        </div>
+    </body>
+</html>
